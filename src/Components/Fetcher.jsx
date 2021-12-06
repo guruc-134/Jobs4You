@@ -1,8 +1,7 @@
-import React , {useEffect, useState} from 'react';
+import React  from 'react';
 import axios from 'axios';
 
-function Fetcher() {
-    const [jobs,setJobs] = useState([])
+function Fetcher({job,setJobs}) {
     const fetchData = () =>{
         // fetching from the the REST API
 
@@ -19,9 +18,7 @@ function Fetcher() {
         var data = localStorage.getItem("jobs")
         const jobsList = JSON.parse(data)
         setJobs(jobsList)
-
         // ------------------------------------------------------------------
-
     }
     return (
         <div>

@@ -33,3 +33,7 @@ TOTAL OBJ COUNT
 1482
 [000 - 100]
 [100 - 199]
+
+
+Trouble Shooting Areas:
+- used local storage to prevent account blocking

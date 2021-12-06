@@ -1,0 +1,19 @@
+.navbar{
+    background-color: rgb(100, 100, 245);
+    height:4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.navbar_header{
+    flex:0.7
+}
+.navbar_links_container{
+    display: flex;
+    flex-direction: row;
+    flex:0.3;
+    justify-content:right;
+}
+.navbar_link{
+    padding:0.3em;
+}
