@@ -15,3 +15,21 @@ Create a clean and good UI
 Use linting and comments in your code
 Create a Github repo and do all the changes there while developing
 ---------------------------------------------------------
+                        SAMPLE OBJ FORMAT
+candidate_required_location: "UK Only"
+category: "All others"
+company_name: "Made Media"
+description: "<p>Made Media designs and produces creative digital solutions for world-leading brands in the arts, culture, and entertainment space. We enable our clients to connect with the world; sharing their ideas, events, and passions with as many people as possible.</p>\n<p>We’re looking for one or more freelance project managers to support our team (if you’re interested in a permanent role, we’re <a class=\"external\" href=\"https://made.media/careers\" rel=\"nofollow\" target=\"_blank\">hiring for those too</a>) in delivering complex digital projects for our clients.</p>\n<p><strong>Responsibilities</strong></p>\n<ul>\n<li>Coordinate internal resources for the flawless execution of multiple projects</li>\n<li>Ensure that projects are delivered on-time, within scope and within budget</li>\n<li>Assist in the definition of project scope and objectives, involving all relevant internal stakeholders and ensuring technical feasibility</li>\n<li>Develop a detailed project plan to monitor and track progress</li>\n<li>Manage changes to the project scope, project schedule, and project costs using appropriate verification techniques</li>\n<li>Measure performance using appropriate project management tools and techniques</li>\n<li>Report and escalate to Made management team as needed</li>\n<li>Perform risk management to minimise potential risks</li>\n<li>Create and maintain comprehensive project documentation</li>\n<li>Meet with clients along with the Account Director to take detailed ordering briefs and clarify specific requirements of each project</li>\n<li>Track project performance, specifically to analyse the successful completion of short and long-term goals</li>\n<li>Meet budgetary objectives and make adjustments to project constraints based on financial analysis</li>\n<li>Develop comprehensive project plans to be shared with clients as well as other staff members</li>\n</ul>\n<p><strong>Requirements</strong></p>\n<p>We are interested in hearing from freelancers with:</p>\n<ul>\n<li>Demonstrable curiosity in current web technologies and digital platforms/products</li>\n<li>Experience defining digital projects, collecting requirements, writing specifications, coordinating efforts to scope, and scheduling/deploying projects</li>\n<li>Experience managing larger digital projects (with £100k+ budgets), overseeing multiple digital projects at the same time, and maintaining a high level of attention to detail to ensure compliance with project requirements.</li>\n<li>Experience working with or in the arts, culture, and/or entertainment sectors.</li>\n<li>Experience with project management software tools and different project management methodologies (agile, waterfall etc.)</li>\n</ul>\n<p><strong>Equal Opportunities</strong></p>\n<p>Made Media is an equal opportunities employer, and we welcome applications from people regardless of race, religion, gender, gender identity, sexual orientation, age, or disability status. We look to employ from a wide range of backgrounds and experiences, and our selection criteria and procedures aim to ensure that employees are selected, promoted and treated equitably.</p>\n<p><strong>Benefits</strong></p>\n<p><strong>Flexible and remote working</strong></p>\n<p>We’re very happy to consider flexible working arrangements, including condensed hours and part-time working. If you’re invited to interview, we’ll talk about this upfront, so you’re clear on what the options are before we proceed to any offers.</p>\n<p>Made Media is a remote business and our team all work from home most of the time.</p>\n"
+id: 1019526
+job_type: "contract"
+publication_date: "2021-12-05T09:41:33"
+salary: ""
+tags: []
+title: "Project Manager"
+url: "https://remotive.io/remote-jobs/all-others/project-manager-1
+---------------------------------------------------------
+
+TOTAL OBJ COUNT 
+1482
+[000 - 100]
+[100 - 199]
