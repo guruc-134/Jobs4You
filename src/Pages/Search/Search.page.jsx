@@ -1,8 +1,9 @@
 import React , {useState}from 'react'
 import Card from '../../Components/Card/Card.component'
-import Fetcher from '../../Components/Fetcher'
+import Fetcher from '../../Components/Fetcher/Fetcher'
 import ReactPaginate from 'react-paginate';
 import '../../Components/Pagination/Pagination.styles.css'
+import './Search.style.css'
 function Search() {
     const [jobs,setJobs] = useState([])
     const [pageNumber, setPageNumber] = useState(0)
@@ -13,18 +14,14 @@ function Search() {
     .map( jobDetail =><Card jobDetail={jobDetail} key={jobDetail.id}/>)  
     var pageCount = Math.ceil(jobs.length / itemsPerPage)
     const changePage = ({selected}) =>
-    {
-        setPageNumber(selected)
-    }
+    {setPageNumber(selected)}
+
     return (
         <div className='SearchPage'>
             This is the search page
             <Fetcher jobs ={jobs} setJobs = {setJobs}/>
             <div>
-            {
-                jobs ?
-                displayItems: null
-            } 
+                {   jobs ? displayItems: null} 
             </div>
             <ReactPaginate
                 previousLabel = {"previous"}

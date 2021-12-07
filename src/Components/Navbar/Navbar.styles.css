@@ -16,4 +16,7 @@
 }
 .navbar_link{
     padding:0.3em;
+    font-size:1.3rem;
+    text-decoration:none;
+    color:white;
 }

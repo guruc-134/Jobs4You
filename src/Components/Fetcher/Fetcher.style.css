@@ -1,0 +1,42 @@
+.fetcher {
+    background-color:brown;
+    width:80%;
+    margin:auto;
+}
+.fetcher_form{
+    display:flex;
+    background-color:green;
+    padding:.3em;
+}
+.form_input{
+    padding:.4em;
+    width:85%;
+    border-radius: 10px;
+    text-align:center;
+    font-size: 1.2rem;
+    outline:none;
+}
+.form_btn{
+    padding:0.3em;
+    border-radius:15px;
+}
+.search-box{
+    flex:0.7
+}
+.options{
+    display:flex;
+    flex-direction: row;
+    justify-content: left;
+    flex:0.3
+}
+.dropdown{
+    width:7rem;
+    padding:0.3em;
+    border-radius: 15px !important;
+    background-color:rgb(255, 255, 255);
+    color:blue;
+}
+.dropdown input {
+    border:none;
+    outline:none;
+}
