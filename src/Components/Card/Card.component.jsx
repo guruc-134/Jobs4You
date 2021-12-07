@@ -24,12 +24,9 @@ function Card({jobDetail}) {
                 <p><b>Job Id - </b>{jobDetail.id} </p>
                 <p><b>Eligible Location: </b>{jobDetail.candidate_required_location}</p>
                 <p>This is a { jobDetail.job_type ? jobDetail.job_type: 'normal'} role</p>
-                <p>This Job was Posted on: {PostedDate}</p>
+                <p>Posted on: {PostedDate}</p>
             </div>
             </Link>
-
-          
-            
             <p className='jobDetail_url'>
                 {jobDetail.url ?
                 <a href={jobDetail.url}> Visit Site </a>

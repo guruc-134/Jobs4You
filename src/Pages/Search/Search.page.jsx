@@ -4,6 +4,7 @@ import Fetcher from '../../Components/Fetcher/Fetcher'
 import ReactPaginate from 'react-paginate';
 import '../../Components/Pagination/Pagination.styles.css'
 import './Search.style.css'
+import JobHunt from '../../Components/Svgs/JobHunt';
 function Search() {
     const [jobs,setJobs] = useState([])
     const [pageNumber, setPageNumber] = useState(0)
@@ -18,23 +19,29 @@ function Search() {
 
     return (
         <div className='SearchPage'>
-            This is the search page
             <Fetcher jobs ={jobs} setJobs = {setJobs}/>
             <div className="job_cards">
-                {   jobs ? displayItems: null} 
+                {   jobs.length >0 ? displayItems: 
+                null
+                // <div>
+                // <JobHunt className='jobHunt_svg'/>
+                // </div>
+                    } 
             </div>
+            {jobs.length > 0?
             <ReactPaginate
-                previousLabel = {"previous"}
-                nextLabel = {"next"}
-                pageCount = {pageCount}
-                onPageChange = {changePage}
-                containerClassName = {"paginationBtns"}
-                previousLinkClassName = {"previousBtn"}
-                nextLinkClassName = {"nextBtn"}
-                disabledClassName = {"paginationDisabled"}
-                activeClassName  = {"paginationActive"}
+            previousLabel = {"previous"}
+            nextLabel = {"next"}
+            pageCount = {pageCount}
+            onPageChange = {changePage}
+            containerClassName = {"paginationBtns"}
+            previousLinkClassName = {"previousBtn"}
+            nextLinkClassName = {"nextBtn"}
+            disabledClassName = {"paginationDisabled"}
+            activeClassName  = {"paginationActive"}
             />
-        </div>
+                :null}
+            </div>
     )
 }
 

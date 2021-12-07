@@ -1,5 +1,7 @@
 import React , {useState,useEffect}  from 'react';
-// import axios from 'axios';
+import {unstable_batchedUpdates} from 'react-dom'
+import stringSimilarity from 'string-similarity'
+import axios from 'axios';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import './Fetcher.style.css'
@@ -8,13 +10,13 @@ function Fetcher({job,setJobs}) {
     const [job_type,setJobType] = useState('')
     const [job_category,setJobCategory] = useState('')
 
-    const fetchData = () =>
+    const fetchData = (job_title,job_category,job_type) =>
     {
         // fetching from the the REST API
         // axios.get('https://remotive.io/api/remote-jobs')
         // .then(resp=> {
-        //     console.log(resp.data.jobs.splice(0,30))
-        //     localStorage.setItem("jobs",JSON.stringify(resp.data.jobs.splice(0,200)))
+        //     console.log(resp.data.jobs.splice(0,1000))
+        //     localStorage.setItem("jobs",JSON.stringify(resp.data.jobs.splice(0,1000)))
         //     setJobs(resp.data.jobs)
         // })
         
@@ -23,23 +25,42 @@ function Fetcher({job,setJobs}) {
         //  to enable smooth developing and testing 
         var data = localStorage.getItem("jobs")
         const jobsList = JSON.parse(data)
-        setJobs(jobsList)
+        var filteredData = jobsList.filter(item =>{
+            var c1 = 
+            (stringSimilarity.compareTwoStrings(item.title.toLowerCase(),job_title.toLowerCase() ) >= 0.5 ) || (item.title.toLowerCase().includes(job_title.toLowerCase()))
+            if (c1)
+            console.log(item.title,job_title, stringSimilarity.compareTwoStrings(item.title,job_title ) )
+            if(job_title.length == 0) c1 = true
+
+            var c2 = item.category == job_category;
+            if (job_category == 'All' || job_category == "") c2 = true
+            
+            var c3 = item.job_type == job_type
+            if (job_type == 'All' || job_type == "") c3 = true
+            console.log(c1,c2,c3)
+            return (c1 & c2 & c3)
+        })
+        console.log(filteredData)
+        setJobs(filteredData)
         // ------------------------------------------------
     }
     const handleSubmit = (e) =>{
         e.preventDefault();
-        setJobTitle('')
+        unstable_batchedUpdates(() => {
+            setJobTitle('')
+            setJobCategory('All')
+            setJobType('All')
+        })
+ 
         console.log(job_title,job_category,job_type)
-        fetchData()
+        fetchData(job_title,job_category,job_type)
     }
     const handleType = (e) =>{
         const {label,value} = e
-        console.log(label,value)
         setJobType(value)
     }
     const handleCategory = (e) =>{
         const {label,value} = e
-        console.log(label,value)
         setJobCategory(value)
     }
     const handleInput = (e) =>{
@@ -49,11 +70,11 @@ function Fetcher({job,setJobs}) {
     }
     const Category_options = 
     [
-        'one', 'two', 'three'
+        "All","Human Resources","Data","Customer Service","QA","Marketing","Finance / Legal","Sales","Writing","Business","Product","Design","Software Development","All others","DevOps / Sysadmin",
     ];
     const Type_options = 
     [
-        'one', 'two', 'three'
+        'All','full_time', 'contract', 'part_time', 'other', 'freelance'
     ];
 
     useEffect(()=>{
@@ -61,7 +82,6 @@ function Fetcher({job,setJobs}) {
     },[])
     return (
         <div className='fetcher'>
-            This is the Fetcher Component
             <form className='fetcher_form'>
                 {/* search by title */}
                 <div className='search-box'>
@@ -72,8 +92,12 @@ function Fetcher({job,setJobs}) {
                         // value = {job_title_query}
                         placeholder='Search By Job Title'>
                     </input>
+                <button
+                    className='form_btn'
+                    onClick={handleSubmit}>
+                        <i class="fas fa-search"></i>
+                </button>
                 </div>
-
                 {/* search by category */}
                 <div className='options'>
                 <Dropdown 
@@ -91,10 +115,7 @@ function Fetcher({job,setJobs}) {
                     onChange={handleType}
                     value={job_type} 
                     placeholder="type" />;
-                <button
-                    className='form_btn'
-                    onClick={handleSubmit}> Fetch Data
-                </button>
+             
                 </div>
 
             </form>

@@ -1,10 +1,68 @@
 .home{
-    height:100vh;
-    background-color:palegoldenrod;
 }
 .home_intro{
-    background-color:rgb(0, 0, 0);
+    background-color:aqua;
+    width:90%;
+    margin: auto;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-items:center
 }
+.features{
+    display:flex;
+    width:95%;
+    margin:auto;
+    flex-direction:row;
+    margin-bottom: 7rem;;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.feature_tag{
+    display:flex;
+    flex-direction:row;
+    width:25%;
+    min-width:300px;
+    background-color:greenyellow;
+    padding:1em;
+    border-radius: 20px;
+    margin:1rem;
+    box-shadow: 1px 1px 0px rgb(34, 34, 34),
+    2px 2px 0px rgba(0, 0, 0, 0.733),
+    3px 3px 0px rgba(0, 0, 0, 0.534),
+    4px 4px 0px rgba(0, 0, 0, 0.513),
+    5px 5px 0px rgba(0, 0, 0, 0.267),
+    6px 6px 0px rgba(77, 77, 77, 0.205);
+    transition: all 0.3s ease-in-out;
+}
+.feature_tag:hover {
+    transform: translateY(-10px) scale(1.04);
+}
+.feature_tag i {
+    font-size:4.6rem;
+    padding-right:10px;
+}
+.feature_tag span {
+    text-align:center;
+}
+.intro_img{
+    flex:0.5;
+    margin:auto;
+}
+.intro_content{
+    background-color:rgb(60, 63, 241);
+    padding:10px;
+    flex:0.5;
+    min-width: 400px;
+    margin: auto;
+}
+
 .randomJobs{
-    background-color:palevioletred;
+    margin-top:3rem;
+    width:95%;
+    margin:auto;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
 }
+

@@ -13,30 +13,36 @@
     width:85%;
     border-radius: 10px;
     text-align:center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     outline:none;
 }
 .form_btn{
     padding:0.3em;
-    border-radius:15px;
+    background-color:white;
+    border-left: none;
+    margin-left: -10px;;
+    border-radius:0px 15px 15px 0px;
+    font-size: 1.3rem;
 }
 .search-box{
-    flex:0.7
+    flex:0.5;
+    display:flex;
+    flex-direction:row;
 }
 .options{
     display:flex;
     flex-direction: row;
-    justify-content: left;
-    flex:0.3
+    justify-content: center;
+    flex:0.5
 }
 .dropdown{
-    width:7rem;
-    padding:0.3em;
+    width:15rem;;
+    border:none !important;
+    outline:none !important;
+    margin-left:1rem;
     border-radius: 15px !important;
-    background-color:rgb(255, 255, 255);
-    color:blue;
 }
 .dropdown input {
-    border:none;
-    outline:none;
+    border:none !important;
+    outline:none !important;
 }
