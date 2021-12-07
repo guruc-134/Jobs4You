@@ -1,6 +1,43 @@
 .card{
     background-color: aqua;
-    width:33%;
+    width:25%;
+    min-width: 300px;;
     margin:auto;
     margin-top:1rem;
+    margin:1rem;
+    border-radius: 15px;
+    box-shadow: 1px 1px 0px #999,
+    2px 2px 0px #999,
+    3px 3px 0px #999,
+    4px 4px 0px #999,
+    5px 5px 0px #999,
+    6px 6px 0px #999;
+    text-align: left;
+    padding: 1em;
+    font-size:1.2rem;
+}
+.job_company{
+    text-align:center;
+    font-weight: bolder;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+.job_header{
+    margin-top:0px;
+    padding-top:0px;
+}
+.moreInfo_link{
+    text-decoration: none !important;
+    color:black;
+}
+
+.jobDetail_url a{
+    text-decoration: none;
+    color:Brown;
+    font-weight: bold;
+    font-size:1.4rem;
+}
+.jobDetail_url{
+    text-align: center;
+    font-size: 1.6rem;
 }

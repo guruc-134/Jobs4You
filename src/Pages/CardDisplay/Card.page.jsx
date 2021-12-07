@@ -1,10 +1,10 @@
 import React, {useEffect,useState,useRef} from 'react'
 import { useLocation } from 'react-router-dom'
 import parse from 'html-react-parser';
+import './CardPage.styles.css'
 function CardPage(props) {
     const url =  useLocation()
     const [job,setJob] = useState()
-    const job_dscr_ref = useRef("hey")
     const fetchData = () =>{
         const jobId = url.pathname.split('-')[1]
         console.log(jobId)
@@ -30,27 +30,17 @@ function CardPage(props) {
             }
         })
     }
-
-  
-    // job_dscr_ref.innerHTML = job.description
     useEffect(()=>{
         fetchData()
     },[])
     return (
         <div className='cardPage'>
             {job?
-            <div>
                 <h1>
                     {job.company_name} 
-                </h1>
-                <div className='job_description' ref={job_dscr_ref}>
-                    job description here
-                </div>
-            </div>
-            :null
-            }
-        <div>
-                {job ?parse(job.description):null}
+                </h1>:null}
+        <div className='job_description'>
+            {job ?parse(job.description):null}
         </div>
         </div>
     )

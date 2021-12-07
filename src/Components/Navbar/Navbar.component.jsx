@@ -10,7 +10,7 @@ function Navbar() {
         <div className='navbar'>
             <div className='navbar_header'>
                 <h1>
-                    Jobs4U
+                    Jobs4You
                 </h1>
             </div>
             <div className='navbar_links_container'>

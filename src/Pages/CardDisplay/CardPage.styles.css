@@ -1,0 +1,10 @@
+.cardPage{
+    background-color:paleturquoise;
+}
+.job_description{
+    width:80%;
+    margin:auto;
+    background-color:pink;
+    text-align:justify;
+    padding:1em;
+}

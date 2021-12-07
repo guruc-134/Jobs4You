@@ -20,7 +20,7 @@ function Search() {
         <div className='SearchPage'>
             This is the search page
             <Fetcher jobs ={jobs} setJobs = {setJobs}/>
-            <div>
+            <div className="job_cards">
                 {   jobs ? displayItems: null} 
             </div>
             <ReactPaginate
