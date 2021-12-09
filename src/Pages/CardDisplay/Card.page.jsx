@@ -52,7 +52,7 @@ function CardPage(props) {
     }
     useEffect(()=>{
         fetchData()
-    },[])
+    })
     return (
         <div className='cardPage'>
             {job?

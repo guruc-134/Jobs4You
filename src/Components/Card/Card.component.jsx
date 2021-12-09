@@ -64,7 +64,7 @@ function Card({jobDetail}) {
         {
             setTags(tagsDict[jobDetail.id])
         }
-    }, [])
+    },[])
 
     return (
         <div className='card' >
