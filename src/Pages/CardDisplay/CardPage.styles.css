@@ -53,12 +53,25 @@
     font-size:2rem;
 
 }
-
+@media screen and (max-width:850px){
+    .jobPage_header{
+       font-size:1.4rem;
+    }
+    .job_description{
+        width:90%;
+        margin:auto;
+       font-size: 1rem;
+    }
+    .info_tags{
+        padding:10px;
+        font-size:1rem;
+    }
+}
 @media screen and (max-width:500px){
     .cardPage{
         width:90%;
         margin-top: 5rem;
-        transform:translateX(-12px)
+        transform:translateX(15px)
     }
      .jobPage_header{
         font-size:1.2rem;
@@ -66,22 +79,7 @@
      .job_description{
          width:90%;
          margin:auto;
-        transform:translateX(-10px);
-        font-size: 1rem;
-     }
-     .info_tags{
-         padding:10px;
-         font-size:1rem;
-     }
-}
-@media screen and (max-width:850px){
-     .jobPage_header{
-        font-size:1.4rem;
-     }
-     .job_description{
-         width:90%;
-         margin:auto;
-        transform:translateX(-15px);
+        transform:translateX(10px);
         font-size: 1rem;
      }
      .info_tags{
