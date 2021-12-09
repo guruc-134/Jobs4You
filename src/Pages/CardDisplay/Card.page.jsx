@@ -16,22 +16,23 @@ function CardPage(props) {
         //  to enable smooth developing and testing 
         var data = localStorage.getItem("jobs")
         var jobsList = JSON.parse(data)
-        if(jobsList === null || jobsList.length === 0)
+        if(jobsList == null || jobsList.length === 0)
         {
             // fetching from the the REST API
-            console.log('api')
+            // console.log('api')
             axios.get('https://remotive.io/api/remote-jobs')
             .then(resp=> {
                 localStorage.setItem("jobs",JSON.stringify(resp.data.jobs.splice(0,400)))
                 let joblist = resp.data.jobs
                 joblist.forEach(job=>{
-                    if (job.id === jobId)
+                    if (job.id == jobId)
                     {
                         console.log('match found')
                         rightNow = new Date(job.publication_date);  
                         PostedDate = rightNow.toISOString().slice(0,10).replace(/-/g,"-");
                         console.log(PostedDate)
                         job.publication_date = PostedDate
+                        console.log(job)
                         setJob(job);
                     }
                 })
@@ -39,7 +40,7 @@ function CardPage(props) {
         }
         else{
             jobsList.forEach(job=>{
-                if (job.id === jobId)
+                if (job.id == jobId)
                 {
                     rightNow = new Date(job.publication_date);  
                     PostedDate = rightNow.toISOString().slice(0,10).replace(/-/g,"-");
@@ -52,7 +53,7 @@ function CardPage(props) {
     }
     useEffect(()=>{
         fetchData()
-    })
+    },[])
     return (
         <div className='cardPage'>
             {job?
