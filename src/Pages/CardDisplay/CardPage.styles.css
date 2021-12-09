@@ -1,10 +1,91 @@
 .cardPage{
-    background-color:paleturquoise;
+    background-color:rgba(238, 236, 236, 0.294);
+    margin-top: 5.5rem;
+    font-family: 'Lato', sans-serif;
 }
+.info_tags{
+    width: 90%;
+    display: flex;
+    margin:auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-size:1.3rem;
+    justify-content: space-between
+}
+
 .job_description{
     width:80%;
     margin:auto;
-    background-color:pink;
+    background-color:var(--color_secondary);
     text-align:justify;
+    border-radius: 10px;
     padding:1em;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.555);
+    backdrop-filter: blur( 5.0px );
+    -webkit-backdrop-filter: blur( 5.0px );
+    margin-bottom: 2rem;
+}
+.jobPage_company{
+    width:fit-content;
+    margin:auto;
+    font-family: 'Lato', sans-serif;
+    font-size:2.5rem;
+    color:black;
+    padding: 0 2rem;
+    border-bottom: 3px dashed black;
+}
+.jobPage_company a{
+    color: rgb(0, 132, 255);
+    text-decoration:none;
+}
+.visit_website{
+    text-align:left;
+    font-size:1.2rem;
+    color:black;
+    text-decoration:underline;
+}
+.visit_website a{
+    color:black;
+    text-decoration:none;
+}
+.jobPage_header{
+    font-family: 'Lato', sans-serif;
+    font-size:2rem;
+
+}
+
+@media screen and (max-width:500px){
+    .cardPage{
+        width:90%;
+        margin-top: 5rem;
+        transform:translateX(-12px)
+    }
+     .jobPage_header{
+        font-size:1.2rem;
+     }
+     .job_description{
+         width:90%;
+         margin:auto;
+        transform:translateX(-10px);
+        font-size: 1rem;
+     }
+     .info_tags{
+         padding:10px;
+         font-size:1rem;
+     }
+}
+@media screen and (max-width:850px){
+     .jobPage_header{
+        font-size:1.4rem;
+     }
+     .job_description{
+         width:90%;
+         margin:auto;
+        transform:translateX(-15px);
+        font-size: 1rem;
+     }
+     .info_tags{
+         padding:10px;
+         font-size:1rem;
+     }
 }

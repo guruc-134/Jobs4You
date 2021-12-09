@@ -4,7 +4,6 @@ import Fetcher from '../../Components/Fetcher/Fetcher'
 import ReactPaginate from 'react-paginate';
 import '../../Components/Pagination/Pagination.styles.css'
 import './Search.style.css'
-import JobHunt from '../../Components/Svgs/JobHunt';
 function Search() {
     const [jobs,setJobs] = useState([])
     const [pageNumber, setPageNumber] = useState(0)
@@ -22,10 +21,10 @@ function Search() {
             <Fetcher jobs ={jobs} setJobs = {setJobs}/>
             <div className="job_cards">
                 {   jobs.length >0 ? displayItems: 
-                null
-                // <div>
-                // <JobHunt className='jobHunt_svg'/>
-                // </div>
+                <div>
+                    <h3>Search for jobs based on title</h3>
+                    <img  alt='search_img' src={process.env.PUBLIC_URL + '/JobSearchPage.jpg'} />
+                </div>
                     } 
             </div>
             {jobs.length > 0?

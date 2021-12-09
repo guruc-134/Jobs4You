@@ -11,7 +11,7 @@
       font-size: 1.2rem;
 }
 .paginationBtns  a {
-        padding: .3em;
+        padding: 0.4em .6em;
         border: 1px solid black;
         margin: 8px;
         margin-bottom: 1rem;
@@ -23,14 +23,15 @@
         color: black;
         -webkit-box-shadow: 0 0 3px rgb(0,0,0);
         -moz-box-shadow: 0 0 3px rgb(0,0,0);
-        background: rgba(255, 255, 255, 0.473);
+        background: var(--color_secondary);
     }
     
     .paginationActive a {
       color: black;
       -webkit-box-shadow: 0 0 3px rgb(0,0,0);
       -moz-box-shadow: 0 0 3px rgb(0,0,0);
-      background: rgba(255, 255, 255, 0.473);
+      background: var(--color_primary);
+
     }
     
     .paginationDisabled a {

@@ -1,26 +1,28 @@
 .card{
-    background-color: aqua;
+    background-color:var(--color_secondary);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.555);
+    backdrop-filter: blur( 5.0px );
+    -webkit-backdrop-filter: blur( 5.0px );
     width:25%;
     min-width: 300px;;
     margin:auto;
     margin-top:1rem;
     margin:1rem;
     border-radius: 15px;
-    box-shadow: 1px 1px 0px #999,
-    2px 2px 0px #999,
-    3px 3px 0px #999,
-    4px 4px 0px #999,
-    5px 5px 0px #999,
-    6px 6px 0px #999;
     text-align: left;
-    padding: 1em;
+    padding: .5em;
     font-size:1.2rem;
+    align-items: center;
+    justify-items: space-around;
+    position: relative;
 }
 .job_company{
     text-align:center;
     font-weight: bolder;
+    font-size:2rem;
     text-transform: capitalize;
     text-decoration: underline;
+    margin-bottom:10px;
 }
 .job_header{
     margin-top:0px;
@@ -33,7 +35,7 @@
 
 .jobDetail_url a{
     text-decoration: none;
-    color:Brown;
+    color:rgb(255, 255, 255);
     font-weight: bold;
     font-size:1.4rem;
 }
@@ -41,3 +43,62 @@
     text-align: center;
     font-size: 1.6rem;
 }
+.addTags button{
+    background-color: rgb(0, 0, 0);
+    outline: none;
+    border:none;
+    padding:.5em;
+    border-radius:8px;
+    cursor: pointer;
+    color:white;
+    font-weight:bold;
+}
+.tags_input{
+    position:absolute;
+    background-color:rgba(207, 193, 196, 0.781);
+    padding:0.3em;
+    bottom:0;
+    right:5px;
+    display:none;
+    border-radius: 5px;
+    /* position: relative; */
+}
+.tags_input span{
+    position: absolute;
+    right:-10px;
+    top:-10px;
+    font-size:0.8rem;
+    cursor: pointer;
+}
+.tags_form input{
+    background-color: white;
+    outline: none;
+    border:none;
+    padding:.3em;
+    border-radius:8px 0px 0px 8px;
+}
+.tags_form button{
+    background-color: white;
+    outline: none;
+    border:none;
+    padding:.3em;
+    border-radius:0px 8px 8px 0px;
+    cursor: pointer;
+
+}
+@media screen and (max-width:500px){
+.card{
+    font-size:1rem;
+}
+.job_company{
+    font-size:1.5rem;
+}
+}
+@media screen and (max-width:750px){
+    .card{
+        font-size:1.2rem;
+    }
+    .job_company{
+        font-size:1.5rem;
+    }
+    }

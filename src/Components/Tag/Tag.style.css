@@ -1,0 +1,18 @@
+.tag{
+    display:inline-block;
+    padding:0.3em;
+    margin:0.5rem;
+    background-color:var(--color_primary);
+    border-radius:5px;
+    color:white;
+    font-size:1rem;
+}
+.tags_container{
+    width:90%;
+    padding:0 .5rem;
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}

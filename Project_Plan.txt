@@ -1,10 +1,10 @@
 To Do List :
-Create a React App to display content in the form of cards.
-- Use this ( https://remotive.io/api/remote-jobs ) Rest API to fetch data
-- Redirect to a specific card details page when clicked, which will include (All Data from API)
-- Make a search bar for jobs according to the title.
-- Create a filter to search jobs by their category, Job type, sort jobs according to publication date.
-- Add Pagination only 20 jobs should be visible initially and show rest of the jobs when user clicks on another page.
+# Create a React App to display content in the form of cards.
+# Use this ( https://remotive.io/api/remote-jobs ) Rest API to fetch data
+# Redirect to a specific card details page when clicked, which will include (All Data from API)
+# Make a search bar for jobs according to the title.
+# Create a filter to search jobs by their category, Job type, sort jobs according to publication date.
+# Add Pagination only 20 jobs should be visible initially and show rest of the jobs when user clicks on another page.
 - For each job card add a button called "add tags" which will ask for users input
 - Whatever user types should be displayed in form of tags maximum 3 tags and user can give all 3 tags in the same input separated by commas " , ".
 
